@@ -625,6 +625,8 @@ body {
     background: linear-gradient(135deg, #2E8B57, #3cb371);
     width: 26px;
     height: 26px;
+    min-width: 26px;
+    min-height: 26px;
     display: flex;
     align-items: center;
     justify-content: center;
