@@ -985,6 +985,7 @@ body {
     display: flex;
     align-items: center;
     max-height: 40px;
+    background: #e5e5e5;
 }
 
 .rodape-dev img {
