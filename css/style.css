@@ -992,7 +992,7 @@ body {
     flex-wrap: wrap;
     gap: 15px;
     position: relative;
-    bottom: 0;
+    margin: 0;
 }
 
 .rodape-dev {
