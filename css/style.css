@@ -621,9 +621,8 @@ body {
 }
 
 /* Ícone */
-.escolher-lista li span {
+.escolher-lista li .check {
     background: linear-gradient(135deg, #2E8B57, #3cb371);
-    color: #fff !important;
     width: 26px;
     height: 26px;
     display: flex;
@@ -632,6 +631,11 @@ body {
     border-radius: 50%;
     font-size: 13px;
     box-shadow: 0 4px 10px rgba(46,139,87,0.3);
+}
+
+.escolher-lista li .check::before {
+    content: "✓";
+    color: #fff;
 }
 
 /* CONTATO */
