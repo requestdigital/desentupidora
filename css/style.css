@@ -631,6 +631,7 @@ body {
     border-radius: 50%;
     font-size: 13px;
     box-shadow: 0 4px 10px rgba(46,139,87,0.3);
+    flex-shrink: 0;
 }
 
 .escolher-lista li .check::before {
