@@ -1431,7 +1431,7 @@ body {
 @media (max-width: 768px) {
 
     .menu {
-        gap: 15px;
+        gap: 85px;
     }
 
     .menu ul {
