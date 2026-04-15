@@ -6,6 +6,10 @@ html, body {
   min-height: 100%;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 main {
   flex: 1;
 }
@@ -30,8 +34,10 @@ body {
   align-items: center;
   border-bottom: 3px solid #2E8B57;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
 }
 
@@ -43,6 +49,9 @@ body {
 }
 .logo .verde { color: #2E8B57; }
 .logo .azul { color: #0077cc; }
+
+.banner-box h1 .verde { color: #2E8B57; }
+.banner-box h1 .azul { color: #0077cc; }
 
 .logo a {
   text-decoration: none;
@@ -95,6 +104,7 @@ body {
     align-items: center;
     overflow: hidden;
     color: #ffffff;
+    top: 50px;
 }
 
 /* IMAGEM */
@@ -114,9 +124,9 @@ body {
     inset: 0;
     background: linear-gradient(
         90deg,
-        rgba(15, 23, 42, 0.95) 0%,
-        rgba(15, 23, 42, 0.85) 35%,
-        rgba(15, 23, 42, 0.6) 55%,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(32, 42, 66, 0.621) 35%,
+        rgba(62, 63, 66, 0.6) 55%,
         transparent 75%
     );
     z-index: 2;
@@ -136,6 +146,8 @@ body {
     font-weight: 800;
     margin-bottom: 10px;
     letter-spacing: 1px;
+
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 /* TELEFONE */
@@ -143,6 +155,8 @@ body {
     font-size: 2.4rem;
     color: #0077cc;
     margin-bottom: 20px;
+
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* TEXTO */
@@ -151,6 +165,31 @@ body {
     line-height: 1.7;
     margin-bottom: 30px;
     color: rgba(255,255,255,0.9);
+
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.banner-box {
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    padding: 30px;
+
+    /* borda suave */
+    border: 1px solid rgba(255,255,255,0.08);
+
+    /* efeito vidro leve */
+    backdrop-filter: blur(6px);
+
+    max-width: 500px;
+}
+
+/* melhora leitura dentro do box */
+.banner-box h1,
+.banner-box h2,
+.banner-box p,
+.banner-box .badge {
+    color: #fff;
 }
 
 /* BADGE MODERNO */
@@ -1857,11 +1896,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
-    .menu {
-        gap: 35px;
-    }
-
     .menu ul {
         flex-direction: column;
         gap: 15px;
@@ -1895,4 +1929,340 @@ body {
     height: 85vh;
   }
 
+}
+
+/* DEPOIMENTOS */
+.depoimentos {
+    background: linear-gradient(135deg, #166534, #0f172a, #1e40af);
+    padding: 100px 40px;
+    text-align: center;
+    color: #fff;
+}
+
+/* TÍTULO */
+.depoimentos h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.depoimentos h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    margin: 12px auto 0;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #22c55e, #0ea5e9);
+}
+
+/* SUBTÍTULO */
+.depoimentos .subtitulo {
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 50px;
+}
+
+/* GRID */
+.depoimentos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* CARD */
+.depoimento-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+    padding: 30px 25px;
+    border-radius: 16px;
+    position: relative;
+    transition: all 0.4s ease;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* ASPAS DECORATIVA */
+.depoimento-card::before {
+    content: "“";
+    font-size: 60px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    opacity: 0.15;
+}
+
+/* TEXTO */
+.depoimento-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* NOME */
+.depoimento-card h4 {
+    font-size: 14px;
+    color: #22c55e;
+}
+
+/* HOVER */
+.depoimento-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+    .depoimentos {
+        padding: 70px 20px;
+    }
+
+    .depoimentos h2 {
+        font-size: 26px;
+    }
+
+    .depoimento-card p {
+        font-size: 15px;
+    }
+
+}
+
+/* =========================
+   ÁREA DE ATENDIMENTO
+========================= */
+.area {
+  padding: 90px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.area h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.area p {
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.area ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.area ul li {
+  background: linear-gradient(135deg, #2E8B57, #0077cc);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  box-shadow: 0 5px 15px rgba(0,119,204,0.2);
+}
+
+/* =========================
+   FAQ
+========================= */
+.faq {
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #eef2f7, #f8fafc);
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.faq-item {
+  max-width: 800px;
+  margin: 0 auto 15px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+}
+
+.faq-item h3 {
+  font-size: 16px;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* =========================
+   CTA (CHAMADA PARA AÇÃO)
+========================= */
+.cta {
+  padding: 90px 20px;
+  text-align: center;
+  background: linear-gradient(120deg, #0b1f17, #166534, #0f2a44);
+  color: #fff;
+}
+
+.cta h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  margin-bottom: 30px;
+  color: rgba(255,255,255,0.8);
+}
+
+.cta a {
+  display: inline-block;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .3s;
+  box-shadow: 0 10px 25px rgba(34,197,94,0.4);
+}
+
+.cta a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(34,197,94,0.5);
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 768px) {
+
+  .depoimentos h2,
+  .faq h2,
+  .cta h2 {
+    font-size: 24px;
+  }
+
+  .area ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .area ul li {
+    width: 80%;
+    text-align: center;
+  }
+
+}
+
+.mapa {
+    padding: 100px 20px;
+    text-align: center;
+
+    background: linear-gradient(
+        120deg,
+        #0b1f17 0%,
+        #14532d 50%,
+        #0f172a 100%
+    );
+}
+
+.mapa h2 {
+    color: #fff;
+}
+
+.mapa p {
+    color: rgba(255,255,255,0.8);
+}
+
+/* detalhe suave igual outras seções */
+.mapa::before {
+    content: "";
+    width: 350px;
+    height: 350px;
+    top: -80px;
+    right: -80px;
+    background: radial-gradient(circle, rgba(46,139,87,0.12), transparent 70%);
+    z-index: 0;
+}
+
+/* TITULO */
+.mapa h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.mapa h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    margin: 12px auto 0;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #2E8B57, #0077cc);
+}
+
+.mapa p {
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+/* CONTAINER ESTILO CARD (igual site) */
+.mapa-container {
+    position: relative;
+    z-index: 2;
+
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 18px;
+    overflow: hidden;
+
+    background: #ffffff;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+
+    transition: all 0.4s ease;
+}
+
+/* leve interação (fica premium) */
+.mapa-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.18);
+}
+
+/* MAPA */
+.mapa-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    display: block;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .mapa {
+        padding: 80px 20px;
+    }
+
+    .mapa h2 {
+        font-size: 26px;
+    }
+
+    .mapa-container iframe {
+        height: 300px;
+    }
 }
