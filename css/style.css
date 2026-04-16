@@ -108,14 +108,13 @@ body {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  background-color: #fff;
 }
 
 .hamburger span {
   display: block;
   width: 25px;
   height: 3px;
-  background-color: #333;
+  background-color: #ffffff;
   border-radius: 2px;
 }
 
@@ -259,10 +258,6 @@ body {
         text-align: center;
         padding: 0 20px;
         max-width: 350px;
-    }
-
-    .banner-content h1 {
-        font-size: 1.8rem !important;
     }
 
     .banner-content h2 {
@@ -1675,7 +1670,7 @@ body {
     /* Rodapé */
     .rodape-info p, .rodape-contato h3, .rodape-contato ul li,
     .rodape-copy p, .rodape-dev span {
-        font-size: 20px !important;
+        font-size: 18px !important;
     }
 
     /* WhatsApp flutuante */
@@ -1727,7 +1722,7 @@ body {
 
 @media (max-width: 768px) {
   html {
-    font-size: 24px !important;
+    font-size: 20px;
   }
 }
 
@@ -1736,7 +1731,7 @@ body {
   .menu {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .hamburger {
@@ -2079,6 +2074,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
+  padding: 0;
 }
 
 .area ul li {
@@ -2339,4 +2335,17 @@ body {
     .mapa-container iframe {
         height: 300px;
     }
+}
+
+@media (max-width: 768px) {
+  .banner-box {
+    background: transparent;
+    backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+  }
+
+  .logo {
+    font-size: 16px !important;
+  }
 }
