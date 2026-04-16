@@ -31,6 +31,7 @@ body {
 .campo textarea {
     box-sizing: border-box; /* Adicione esta linha */
     width: 100%;
+    font-size: 16px;
 }
 
 /* MENU */
@@ -1925,11 +1926,14 @@ body {
 
   .campo select {
     line-height: 1.2 !important;
-    height: 46px;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
     transform: translateZ(0);
     backface-visibility: hidden;
+  }
+
+  input, textarea, select {
+    font-size: 18px !important;
   }
 
   .contato-form-area h2::after {
