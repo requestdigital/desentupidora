@@ -2372,4 +2372,11 @@ body {
     font-size: 45px;
   }
 
+  .campo input[type="date"] {
+    display: block;
+    -webkit-appearance: none;
+    appearance: none;
+    min-height: 48px;
+  }
+
 }
