@@ -1533,7 +1533,7 @@ body {
     }
 
     /* Texto geral: parágrafos, listas, spans, links */
-    body, p, li, span, a, h1, h2, h3, h4, h5, h6 {
+    body, p, li, span, a, h2, h3, h4, h5, h6 {
         font-size: 1.125rem !important;
         line-height: 1.5;
     }
@@ -1677,13 +1677,13 @@ body {
     .whatsapp-flutuante {
         width: 70px;
         height: 70px;
-        font-size: 32px;
+        font-size: 32px !important;
         bottom: 70px;
         right: 15px;
     }
 
     /* Ícones em geral */
-    i.fas, i.far, i.fab, i.fa-solid, i.fa-regular, i.fa-brands {
+    i.fas, i.far, i.fa-regular, i.fa-brands {
         font-size: 1rem;
     }
 
@@ -1741,7 +1741,7 @@ body {
   .menu ul {
     display: none;
     position: absolute;
-    top: 110px;
+    top: 65px;
     right: 0;
     width: 220px;
     background-color: #F4F4F4;
@@ -2348,4 +2348,14 @@ body {
   .logo {
     font-size: 16px !important;
   }
+
+  .banner-content span, body {
+    font-size: 32px !important;
+    line-height: 0.8 !important;
+  }
+
+  .diferencial-card i {
+    font-size: 45px;
+  }
+
 }
